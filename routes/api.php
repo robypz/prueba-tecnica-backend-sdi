@@ -13,7 +13,6 @@ Route::get('/user', function (Request $request) {
 Route::post('/token', [TokenController::class, 'token'])->name('token');
 
 // search artists,tacks and albums
-Route::controller(SearchController::class)
-::class)->group(function () {
+Route::controller(SearchController::class)->group(function () {
     Route::get('/search', 'search')->name('search');
 });
